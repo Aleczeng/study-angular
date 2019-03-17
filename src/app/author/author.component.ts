@@ -7,6 +7,7 @@ import {AuthorService} from '../service/author.service';
 })
 export class AuthorComponent {
   protected authors: any;
+  isActive: false;
 
   constructor(private authorService: AuthorService) {
     this.authors = authorService.getAuthors();
