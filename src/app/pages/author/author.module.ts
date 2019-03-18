@@ -1,18 +1,23 @@
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {AuthorComponent} from './author.component';
+import {AuthorListComponent} from './author-list/author-list.component';
 import {BrowserModule} from '@angular/platform-browser';
+import {AuthorDetailsComponent} from './author-details/author-details.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
-    AuthorComponent
+    AuthorListComponent,
+    AuthorDetailsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule
   ],
   exports: [
-    AuthorComponent
+    AuthorListComponent,
+    AuthorDetailsComponent,
   ]
 })
 export class AuthorModule {

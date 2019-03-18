@@ -1,13 +1,14 @@
 import {Component} from '@angular/core';
-import {AuthorService} from '../../service/author.service';
+import {AuthorService} from '../../../service/author.service';
+import {Author} from '../../../models/author';
 
 @Component({
   selector: 'app-author',
-  templateUrl: './author.component.html',
-  styleUrls: ['./author.component.css']
+  templateUrl: './author-list.component.html',
+  styleUrls: ['./author-list.component.css']
 })
-export class AuthorComponent {
-  protected authors: any;
+export class AuthorListComponent {
+  protected authors: Author[];
   isActive: boolean;
   templateValue: string;
   anotherTemplateValue: string;

@@ -1,5 +1,9 @@
 export class AuthorService {
-   getAuthors() {
-    return ['author1', 'author2', 'author3'];
+  getAuthors() {
+    return [
+      {id: 1, name: 'author1'},
+      {id: 2, name: 'author2'},
+      {id: 3, name: 'author3'}
+    ];
   }
 }

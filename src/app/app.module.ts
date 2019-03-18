@@ -2,19 +2,21 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormBuilder, FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
-import {AuthorComponent} from './pages/author/author.component';
+import {AuthorListComponent} from './pages/author/author-list/author-list.component';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {NavBarComponent} from './pages/nav-bar/nav-bar.component';
 import {AuthorModule} from './pages/author/author.module';
 import {AuthorService} from './service/author.service';
+import {AuthorDetailsComponent} from './pages/author/author-details/author-details.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'author', component: AuthorComponent},
+  {path: 'author', component: AuthorListComponent},
+  {path: 'author/:id', component: AuthorDetailsComponent},
   {path: '**', component: NotFoundComponent},
 ];
 
@@ -31,7 +33,7 @@ const routes: Routes = [
     AuthorModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthorService],
+  providers: [AuthorService, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule {
