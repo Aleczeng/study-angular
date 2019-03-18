@@ -4,6 +4,7 @@ import {AuthorListComponent} from './author-list/author-list.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {AuthorDetailsComponent} from './author-details/author-details.component';
 import {RouterModule} from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {RouterModule} from '@angular/router';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
   exports: [
     AuthorListComponent,

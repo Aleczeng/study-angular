@@ -31,7 +31,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     AuthorModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [AuthorService, FormBuilder],
   bootstrap: [AppComponent]
