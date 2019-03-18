@@ -16,7 +16,7 @@ import {AuthorDetailsComponent} from './pages/author/author-details/author-detai
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'author', component: AuthorListComponent},
-  {path: 'author/:id', component: AuthorDetailsComponent},
+  {path: 'author/:id/:name', component: AuthorDetailsComponent},
   {path: '**', component: NotFoundComponent},
 ];
 
