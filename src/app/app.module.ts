@@ -3,13 +3,13 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
-import {AuthorModule} from './author/author.module';
-import {AuthorService} from './service/author.service';
-import {NavBarComponent} from './nav-bar/nav-bar.component';
-import {HomeComponent} from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
-import {AuthorComponent} from './author/author.component';
-import {NotFoundComponent} from './not-found/not-found.component';
+import {HomeComponent} from './pages/home/home.component';
+import {AuthorComponent} from './pages/author/author.component';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
+import {NavBarComponent} from './pages/nav-bar/nav-bar.component';
+import {AuthorModule} from './pages/author/author.module';
+import {AuthorService} from './service/author.service';
 
 
 const routes: Routes = [

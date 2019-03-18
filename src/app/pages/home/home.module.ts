@@ -7,7 +7,7 @@ import {BrowserModule} from '@angular/platform-browser';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule
   ],
   exports: [
     HomeComponent

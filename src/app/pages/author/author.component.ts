@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AuthorService} from '../service/author.service';
+import {AuthorService} from '../../service/author.service';
 
 @Component({
   selector: 'app-author',
