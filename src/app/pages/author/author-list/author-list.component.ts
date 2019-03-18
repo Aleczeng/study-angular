@@ -10,17 +10,13 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class AuthorListComponent implements OnInit {
   protected authors: Author[];
-  isActive: boolean;
-  templateValue: string;
-  anotherTemplateValue: string;
-  twoWayBinding: string;
+
   page: number;
   pageSize: number;
 
   constructor(private authorService: AuthorService,
               private router: ActivatedRoute) {
     this.authors = authorService.getAuthors();
-    this.isActive = true;
   }
 
   ngOnInit() {
@@ -28,23 +24,5 @@ export class AuthorListComponent implements OnInit {
       this.page = +params.get('page');
     });
     this.pageSize = 1;
-  }
-
-  onClick($event) {
-    this.isActive = !this.isActive;
-    $event.stopPropagation();
-    console.log('$event', $event);
-  }
-
-  onKeyUp() {
-    console.log('Enter was pressed');
-  }
-
-  onTemplate($event) {
-    this.templateValue = $event.target.value;
-  }
-
-  anotherTemplate(myValue) {
-    this.anotherTemplateValue = myValue;
   }
 }

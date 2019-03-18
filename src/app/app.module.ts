@@ -11,12 +11,15 @@ import {NavBarComponent} from './pages/nav-bar/nav-bar.component';
 import {AuthorModule} from './pages/author/author.module';
 import {AuthorService} from './service/author.service';
 import {AuthorDetailsComponent} from './pages/author/author-details/author-details.component';
+import {DataBindingModule} from './pages/data-binding/data-binding.module';
+import {DataBindingComponent} from './pages/data-binding/data-binding.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'author', component: AuthorListComponent},
   {path: 'author/:id/:name', component: AuthorDetailsComponent},
+  {path: 'data-binding', component: DataBindingComponent},
   {path: '**', component: NotFoundComponent},
 ];
 
@@ -30,8 +33,9 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    AuthorModule,
     RouterModule.forRoot(routes),
+    AuthorModule,
+    DataBindingModule
   ],
   providers: [AuthorService, FormBuilder],
   bootstrap: [AppComponent]

@@ -8,28 +8,5 @@
     [pageSize]="pageSize"
     [collectionSize]="authors.length">
   </ngb-pagination>
-
-  <button class="btn btn-primary btn-sm m-2" [class.active]="isActive" (click)="onClick($event)">Check</button>
-  <br>
-  <button class="btn btn-sm m-2" [style.background-color]="isActive? 'yellow': 'green'">Style binding</button>
-  <br>
-  <label class="m-2">
-    Event Filter
-    <input class="input-group" (keyup.enter)="onKeyUp()">
-  </label><br>
-  <label class="m-2">
-    Template binding Value: {{templateValue}}
-    <input class="input-group" (keyup)="onTemplate($event)">
-  </label><br>
-
-  <label class="m-2">
-    Another way of template binding value: {{anotherTemplateValue}}
-    <input #myValue class="input-group" (keyup)="anotherTemplate(myValue.value)">
-  </label><br>
-  <label class="m-2">
-    Two way binding value: {{twoWayBinding}}
-    <input [(ngModel)]="twoWayBinding" class="input-group">
-  </label><br>
-
 </div>
 
