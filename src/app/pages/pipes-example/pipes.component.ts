@@ -8,8 +8,10 @@ import {Component, OnInit} from '@angular/core';
 export class PipesComponent implements OnInit {
   content1: string;
   text: string;
+  limitedCount: number;
 
   ngOnInit() {
+    this.limitedCount = 10;
     this.content1 = 'Compressing objects:Compressing objects:Compressing objects:Compressing objects:Compressing ' +
       'objects:Compressing objects:';
   }

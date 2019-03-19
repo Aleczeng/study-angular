@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-12">
-      <p>{{content1 | summary:15}}</p>
-    </div>
-    <div class="col-lg-12">
+    <div class="col-lg-12 border m-2">
       <label>
+        Limited Count
+        <input class="input-group" [(ngModel)]="limitedCount">
+      </label>
+      <p>{{content1 | summary:limitedCount}}</p>
+    </div>
+    <div class="col-lg-12 border m-2">
+      <label>
+        Text Upper
         <input class="input-group" [(ngModel)]="text">
       </label>
       <p>{{text | textUpper}}</p>

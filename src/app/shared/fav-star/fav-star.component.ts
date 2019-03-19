@@ -1,14 +1,13 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'fav-star',
   templateUrl: './fav-star.component.html',
 })
 export class FavStarComponent {
-  onClick: boolean;
+  @Input() onClick: boolean;
 
   constructor() {
-    this.onClick = false;
   }
 
   onChange() {
