@@ -10,6 +10,7 @@ import {CommonModule} from '@angular/common';
 import {DataBindingComponent} from './data-binding/data-binding.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     RouterModule,
     AuthorModule,
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     HomeComponent,

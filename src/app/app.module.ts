@@ -11,6 +11,7 @@ import {DataBindingComponent} from './pages/data-binding/data-binding.component'
 import {ServicesModule} from './service/services.module';
 import {PagesModule} from './pages/pages.module';
 import {PipesComponent} from './pages/pipes-example/pipes.component';
+import {SharedModule} from './shared/shared.module';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     PagesModule,
     ServicesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
