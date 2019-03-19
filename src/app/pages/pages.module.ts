@@ -3,13 +3,17 @@ import {HomeComponent} from './home/home.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {AuthorModule} from './author/author.module';
-import {DataBindingModule} from './data-binding/data-binding.module';
 import {RouterModule} from '@angular/router';
 import {PipesComponent} from './pipes-example/pipes.component';
 import {SummaryPipe} from '../pipes/summary.pipe';
+import {CommonModule} from '@angular/common';
+import {DataBindingComponent} from './data-binding/data-binding.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
+    DataBindingComponent,
     HomeComponent,
     NavBarComponent,
     PipesComponent,
@@ -17,9 +21,11 @@ import {SummaryPipe} from '../pipes/summary.pipe';
     SummaryPipe
   ],
   imports: [
+    BrowserModule,
+    FormsModule,
     RouterModule,
     AuthorModule,
-    DataBindingModule,
+    CommonModule
   ],
   exports: [
     HomeComponent,

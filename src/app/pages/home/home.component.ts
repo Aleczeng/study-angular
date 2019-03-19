@@ -6,4 +6,13 @@ import {Component} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  onClick: boolean;
+
+  constructor() {
+    this.onClick = false;
+  }
+
+  onChange() {
+    this.onClick = !this.onClick;
+  }
 }
