@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PipesComponent implements OnInit {
   content1: string;
+  text: string;
 
   ngOnInit() {
     this.content1 = 'Compressing objects:Compressing objects:Compressing objects:Compressing objects:Compressing ' +
