@@ -5,22 +5,27 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {AuthorModule} from './author/author.module';
 import {DataBindingModule} from './data-binding/data-binding.module';
 import {RouterModule} from '@angular/router';
+import {PipesComponent} from './pipes-example/pipes.component';
+import {SummaryPipe} from '../pipes/summary.pipe';
 
 @NgModule({
   declarations: [
     HomeComponent,
     NavBarComponent,
-    NotFoundComponent
+    PipesComponent,
+    NotFoundComponent,
+    SummaryPipe
   ],
   imports: [
     RouterModule,
     AuthorModule,
-    DataBindingModule
+    DataBindingModule,
   ],
   exports: [
     HomeComponent,
     NavBarComponent,
-    NotFoundComponent
+    PipesComponent,
+    NotFoundComponent,
   ]
 })
 export class PagesModule {
