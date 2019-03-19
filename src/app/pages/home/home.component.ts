@@ -12,7 +12,7 @@ export class HomeComponent {
     this.onClick = false;
   }
 
-  onChange() {
-    this.onClick = !this.onClick;
+  onFavChange($event){
+    console.log('Output emit work!',$event);
   }
 }
