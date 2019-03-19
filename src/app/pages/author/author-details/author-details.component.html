@@ -1,5 +1,7 @@
 <div class="container">
   <h2>Authors {{id}}</h2>
-  <button class="btn btn-primary btn-sm" [routerLink]="['/author', 1234]">Next</button>
+  <button class="btn btn-primary btn-sm m-2" [routerLink]="['/author', 1234, 'user1234']">Next</button>
+  <br>
+  <button class="btn btn-dark btn-sm m-2" (click)="onSubmit()">Submit</button>
 </div>
 
