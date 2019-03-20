@@ -13,6 +13,7 @@ import {PagesModule} from './pages/pages.module';
 import {PipesComponent} from './pages/pipes-example/pipes.component';
 import {ReuseComponentComponent} from './pages/reuse-component/reuse-component.component';
 import {DirectivesStudyComponent} from './pages/directives-study/directives-study.component';
+import {DirectivesModule} from './directives/directives.module';
 
 
 const routes: Routes = [

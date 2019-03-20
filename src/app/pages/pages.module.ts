@@ -13,6 +13,7 @@ import {SharedModule} from '../shared/shared.module';
 import {PipesModule} from '../pipes/pipes.module';
 import {ReuseComponentComponent} from './reuse-component/reuse-component.component';
 import {DirectivesStudyComponent} from './directives-study/directives-study.component';
+import {DirectivesModule} from '../directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {DirectivesStudyComponent} from './directives-study/directives-study.comp
     AuthorModule,
     CommonModule,
     SharedModule,
+    DirectivesModule,
     PipesModule
   ],
   exports: [
