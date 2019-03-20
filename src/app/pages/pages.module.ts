@@ -11,6 +11,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {SharedModule} from '../shared/shared.module';
 import {PipesModule} from '../pipes/pipes.module';
+import {ReuseComponentComponent} from './reuse-component/reuse-component.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {PipesModule} from '../pipes/pipes.module';
     HomeComponent,
     NavBarComponent,
     PipesComponent,
+    ReuseComponentComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -33,6 +35,7 @@ import {PipesModule} from '../pipes/pipes.module';
     HomeComponent,
     NavBarComponent,
     PipesComponent,
+    ReuseComponentComponent,
     NotFoundComponent,
   ]
 })

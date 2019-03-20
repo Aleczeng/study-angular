@@ -11,6 +11,7 @@ import {DataBindingComponent} from './pages/data-binding/data-binding.component'
 import {ServicesModule} from './service/services.module';
 import {PagesModule} from './pages/pages.module';
 import {PipesComponent} from './pages/pipes-example/pipes.component';
+import {ReuseComponentComponent} from './pages/reuse-component/reuse-component.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'author/:id/:name', component: AuthorDetailsComponent},
   {path: 'data-binding', component: DataBindingComponent},
   {path: 'pipes', component: PipesComponent},
+  {path: 'reuse-component', component: ReuseComponentComponent},
   {path: '**', component: NotFoundComponent},
 ];
 

@@ -6,13 +6,4 @@ import {Component} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  onClick: boolean;
-
-  constructor() {
-    this.onClick = false;
-  }
-
-  onFavChange($event){
-    console.log('Output emit work!',$event);
-  }
 }
