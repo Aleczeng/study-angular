@@ -5,8 +5,8 @@ import {Component} from '@angular/core';
   templateUrl: './directives-study.component.html',
 })
 export class DirectivesStudyComponent {
+  viewSelected: string;
 
   constructor() {
   }
-
 }
