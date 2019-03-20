@@ -1,12 +1,23 @@
 <div class="container">
   <h2>{{ authors.length }} Authors</h2>
-  <ul *ngFor="let author of authors | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-    <li><a [routerLink]="['/author', author.id, author.name]">{{author.name}}</a></li>
+  <ul *ngFor="let author of authors | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; trackBy: trackAuthor">
+    <li>
+      <a class="m-2" [routerLink]="['/author', author.id, author.name]">{{author.name}}</a>
+    </li>
   </ul>
+  <br>
+  <div class="row">
+    <button class="btn btn-primary btn-sm m-2" (click)="onAdd()">Add author</button>
+    <button class="btn btn-warning btn-sm m-2" (click)="onReload()">Reload author</button>
+    <button class="btn btn-danger btn-sm m-2" [disabled]="authors.length == 0" (click)="onRemove(page-1)">Remove author
+    </button>
+  </div>
+</div>
+
+<div class="m-2">
   <ngb-pagination
     [(page)]="page"
     [pageSize]="pageSize"
     [collectionSize]="authors.length">
   </ngb-pagination>
 </div>
-

@@ -23,6 +23,25 @@ export class AuthorListComponent implements OnInit {
     this.router.queryParamMap.subscribe(params => {
       this.page = +params.get('page');
     });
-    this.pageSize = 1;
+    this.pageSize = 2;
+  }
+
+  onAdd() {
+    this.authors.push({
+      id: this.authors.length + 1,
+      name: 'author' + String(this.authors.length + 1)
+    });
+  }
+
+  onRemove(index) {
+    this.authors.splice(index, 1);
+  }
+
+  trackAuthor(index, author) {
+    return author ? author.id : undefined;
+  }
+
+  onReload() {
+    this.authors = this.authorService.getAuthors();
   }
 }
