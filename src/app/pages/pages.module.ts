@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import {SharedModule} from '../shared/shared.module';
 import {PipesModule} from '../pipes/pipes.module';
 import {ReuseComponentComponent} from './reuse-component/reuse-component.component';
+import {DirectivesStudyComponent} from './directives-study/directives-study.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {ReuseComponentComponent} from './reuse-component/reuse-component.compone
     NavBarComponent,
     PipesComponent,
     ReuseComponentComponent,
+    DirectivesStudyComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -36,6 +38,7 @@ import {ReuseComponentComponent} from './reuse-component/reuse-component.compone
     NavBarComponent,
     PipesComponent,
     ReuseComponentComponent,
+    DirectivesStudyComponent,
     NotFoundComponent,
   ]
 })

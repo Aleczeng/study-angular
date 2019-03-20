@@ -7,9 +7,14 @@ import {Component} from '@angular/core';
 export class ReuseComponentComponent {
   onClick: boolean;
   emitValue: any;
+  tweet:any;
 
   constructor() {
     this.onClick = false;
+    this.tweet = {
+      isLiked: false,
+      likesCount: 0
+    }
   }
 
   onFavChange($event) {

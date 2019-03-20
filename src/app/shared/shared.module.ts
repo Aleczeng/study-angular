@@ -4,11 +4,13 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {FavStarComponent} from './fav-star/fav-star.component';
 import {PanelComponent} from './panel/panel.component';
+import {LikeComponent} from './like/like.component';
 
 @NgModule({
   declarations: [
     FavStarComponent,
-    PanelComponent
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +19,8 @@ import {PanelComponent} from './panel/panel.component';
   ],
   exports: [
     FavStarComponent,
-    PanelComponent
+    PanelComponent,
+    LikeComponent
   ]
 })
 export class SharedModule {

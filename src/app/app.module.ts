@@ -12,6 +12,7 @@ import {ServicesModule} from './service/services.module';
 import {PagesModule} from './pages/pages.module';
 import {PipesComponent} from './pages/pipes-example/pipes.component';
 import {ReuseComponentComponent} from './pages/reuse-component/reuse-component.component';
+import {DirectivesStudyComponent} from './pages/directives-study/directives-study.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'data-binding', component: DataBindingComponent},
   {path: 'pipes', component: PipesComponent},
   {path: 'reuse-component', component: ReuseComponentComponent},
+  {path: 'directives-study', component: DirectivesStudyComponent},
   {path: '**', component: NotFoundComponent},
 ];
 
