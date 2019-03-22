@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container text-center">
   <h2>Directives Study</h2>
 </div>
 
-<div class="container border">
+<div class="container border p-3">
   <h3>ng Switch Case</h3>
   <ul class="nav nav-pills">
     <li class="nav-item"><a class="nav-link" [class.active]="viewSelected == 'map'" (click)="viewSelected = 'map'">Map</a></li>
@@ -16,13 +16,13 @@
   </div>
 </div>
 
-<div class="container border">
+<div class="container border p-3">
   <h3>Custom directive</h3>
   <input type="text" [appInputFormat]="'upperCase'">
 </div>
 
 
-<div class="container border">
+<div class="container border p-3">
   <h3>Zippy Exercise</h3>
   <zippy title="Shipping Details">Shipping content</zippy>
   <zippy title="Billing Details">Billing content</zippy>

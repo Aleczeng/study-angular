@@ -6,13 +6,15 @@ import {FavStarComponent} from './fav-star/fav-star.component';
 import {PanelComponent} from './panel/panel.component';
 import {LikeComponent} from './like/like.component';
 import {ZippyComponent} from './zippy/zippy.component';
+import {ContactFormComponent} from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
     FavStarComponent,
     PanelComponent,
     LikeComponent,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import {ZippyComponent} from './zippy/zippy.component';
     FavStarComponent,
     PanelComponent,
     LikeComponent,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ]
 })
 export class SharedModule {

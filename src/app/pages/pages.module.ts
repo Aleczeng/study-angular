@@ -14,6 +14,7 @@ import {PipesModule} from '../pipes/pipes.module';
 import {ReuseComponentComponent} from './reuse-component/reuse-component.component';
 import {DirectivesStudyComponent} from './directives-study/directives-study.component';
 import {DirectivesModule} from '../directives/directives.module';
+import {FormsStudyComponent} from './forms-study/forms-study.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {DirectivesModule} from '../directives/directives.module';
     ReuseComponentComponent,
     DirectivesStudyComponent,
     NotFoundComponent,
+    FormsStudyComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import {DirectivesModule} from '../directives/directives.module';
     ReuseComponentComponent,
     DirectivesStudyComponent,
     NotFoundComponent,
+    FormsStudyComponent
   ]
 })
 export class PagesModule {

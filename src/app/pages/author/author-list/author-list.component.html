@@ -12,12 +12,13 @@
     <button class="btn btn-danger btn-sm m-2" [disabled]="authors.length == 0" (click)="onRemove(page-1)">Remove author
     </button>
   </div>
+  <div class="m-2">
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]="authors.length">
+    </ngb-pagination>
+  </div>
 </div>
 
-<div class="m-2">
-  <ngb-pagination
-    [(page)]="page"
-    [pageSize]="pageSize"
-    [collectionSize]="authors.length">
-  </ngb-pagination>
-</div>
+
