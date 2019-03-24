@@ -12,6 +12,21 @@
     <textarea class="form-control" id="comment" rows="5" type="text"
               ngModel name="comment" #comment="ngModel" required></textarea>
     <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">Required</div>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ngModel #isSubscribed="ngModel"
+               name="isSubscribed">&nbsp;Subscribe {{isSubscribed.value}}
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="contactMethod" class="font-weight-bold">Contact</label>
+      <select id="contactMethod" name="contactMethod" class="form-control">
+        <option *ngFor="let contactMethod of contactMethods"
+                [ngValue]="contactMethod.id">{{contactMethod.name}}</option>
+      </select>
+    </div>
   </div>
 
   <button type="submit" class="btn btn-primary btn-sm">Submit</button>

@@ -9,8 +9,11 @@ export class ContactFormComponent {
   @Input('favStatus') onClick: boolean;
   @Output() onFavChange = new EventEmitter();
   emitValue: any;
+  contactMethods = [{id: 1, name: 'Email'},
+    {id: 2, name: 'Phone'}];
 
   constructor() {
+    console.log(this.contactMethods);
   }
 
   onChange() {
