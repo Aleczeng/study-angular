@@ -29,6 +29,13 @@
     </div>
   </div>
 
+  <div *ngFor="let contactMethod of contactMethods" class="custom-control custom-radio">
+    <input type="radio" name="customRadio" class="custom-control-input"
+           id="{{contactMethod.id}}" [value]="contactMethod.id">
+    <label class="custom-control-label" for="{{contactMethod.id}}">{{contactMethod.name}}</label>
+  </div>
+
+
   <button type="submit" class="btn btn-primary btn-sm">Submit</button>
 
 </form>
