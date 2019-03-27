@@ -14,7 +14,7 @@ export class ReuseComponentComponent {
     this.tweet = {
       isLiked: false,
       likesCount: 0
-    }
+    };
   }
 
   onFavChange($event) {
