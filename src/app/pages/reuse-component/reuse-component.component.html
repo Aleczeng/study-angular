@@ -1,15 +1,18 @@
-<div class="container border">
-  <h2> Emit Value: {{emitValue}}</h2>
-  <fav-star [favStatus]="false" (onFavChange)="onFavChange($event)"></fav-star>
-</div>
 <div class="container">
-  <bootstrap-panel>
-    <div class="heading">Heading</div>
-    <div class="body">Body</div>
-  </bootstrap-panel>
-</div>
+  <div class="m-2 p-2 border">
+    <h2> Emit Value: {{emitValue}}</h2>
+    <fav-star [favStatus]="false" (onFavChange)="onFavChange($event)"></fav-star>
+  </div>
 
-<div class="container border">
-  <h2>Tweet like</h2>
-  <like [isActive]="tweet.isLiked" [likesCount]="tweet.likesCount"></like>
+  <div class="m-2 p-2 border">
+    <bootstrap-panel>
+      <div class="heading">Heading</div>
+      <div class="body">Body</div>
+    </bootstrap-panel>
+  </div>
+
+  <div class="m-2 p-2 border">
+    <h2>Tweet like</h2>
+    <like [isActive]="tweet.isLiked" [likesCount]="tweet.likesCount"></like>
+  </div>
 </div>
