@@ -4,7 +4,8 @@ import {FormControl} from '@angular/forms';
 @Component({
   selector: 'form-errors',
   templateUrl: './form-errors.component.html',
+  styleUrls: ['form-errors.component.css']
 })
 export class FormErrorsComponent {
-  @Input('formControlName') formControlName: FormControl;
+  @Input('validationName') validationName: FormControl;
 }

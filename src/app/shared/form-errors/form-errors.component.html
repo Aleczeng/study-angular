@@ -1,5 +1,6 @@
-<div class="alert alert-danger" *ngIf="formControlName.touched && formControlName.invalid">
-  <div *ngIf="formControlName.hasError('required')">Required</div>
-  <div *ngIf="formControlName.hasError('minlength')">Minlength</div>
-  <div *ngIf="formControlName.hasError('maxlength')">Maxlength</div>
+<div class="alert alert-danger my-alert" *ngIf="validationName.touched && validationName.invalid">
+  <div *ngIf="validationName.hasError('required')">Required</div>
+  <div *ngIf="validationName.hasError('minlength')">Minlength</div>
+  <div *ngIf="validationName.hasError('maxlength')">Maxlength</div>
+  <div *ngIf="validationName.hasError('cannotContainSpace')">Cannot Contain Space</div>
 </div>
