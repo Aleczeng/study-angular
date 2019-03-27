@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="username">User Name</label>
+    <input type="text" class="form-control" name="username" id="username" formControlName="username">
+    <form-errors [formControlName]="form.get('username')"></form-errors>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="text" class="form-control" id="password" name="password" formControlName="password">
+    <form-errors [formControlName]="form.get('password')"></form-errors>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

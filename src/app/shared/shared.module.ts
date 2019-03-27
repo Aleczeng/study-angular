@@ -1,12 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FavStarComponent} from './fav-star/fav-star.component';
 import {PanelComponent} from './panel/panel.component';
 import {LikeComponent} from './like/like.component';
 import {ZippyComponent} from './zippy/zippy.component';
 import {ContactFormComponent} from './contact-form/contact-form.component';
+import {SignupFormComponent} from './signup-form/signup-form.component';
+import {FormErrorsComponent} from './form-errors/form-errors.component';
 
 @NgModule({
   declarations: [
@@ -14,19 +16,24 @@ import {ContactFormComponent} from './contact-form/contact-form.component';
     PanelComponent,
     LikeComponent,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    SignupFormComponent,
+    FormErrorsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     FavStarComponent,
     PanelComponent,
     LikeComponent,
     ZippyComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    SignupFormComponent,
+    FormErrorsComponent
   ]
 })
 export class SharedModule {

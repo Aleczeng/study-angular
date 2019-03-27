@@ -1,0 +1,5 @@
+<div class="alert alert-danger" *ngIf="formControlName.touched && formControlName.invalid">
+  <div *ngIf="formControlName.hasError('required')">Required</div>
+  <div *ngIf="formControlName.hasError('minlength')">Minlength</div>
+  <div *ngIf="formControlName.hasError('maxlength')">Maxlength</div>
+</div>
