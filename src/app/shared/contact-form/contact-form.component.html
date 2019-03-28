@@ -9,8 +9,7 @@
     </div>
 
     <label class="font-weight-bold" for="comment">Comment</label>
-    <textarea class="form-control" id="comment" rows="5" type="text"
-              ngModel name="comment" #comment="ngModel" required></textarea>
+    <textarea class="form-control" id="comment" rows="5" ngModel name="comment" #comment="ngModel" required></textarea>
     <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">Required</div>
 
     <div class="checkbox">
@@ -24,7 +23,7 @@
       <label for="contactMethod" class="font-weight-bold">Contact</label>
       <select id="contactMethod" name="contactMethod" class="form-control">
         <option *ngFor="let contactMethod of contactMethods"
-                [ngValue]="contactMethod.id">{{contactMethod.name}}</option>
+                [value]="contactMethod.id">{{contactMethod.name}}</option>
       </select>
     </div>
   </div>

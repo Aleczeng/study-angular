@@ -27,8 +27,4 @@ export class SignupFormComponent {
   login() {
     this.form.setErrors({formInvalid: true});
   }
-
-  logType(x) {
-    console.log(x);
-  }
 }

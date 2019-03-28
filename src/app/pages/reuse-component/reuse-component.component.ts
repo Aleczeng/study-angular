@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 export class ReuseComponentComponent {
   onClick: boolean;
   emitValue: any;
-  tweet:any;
+  tweet: { isLiked: boolean, likesCount: number };
 
   constructor() {
     this.onClick = false;

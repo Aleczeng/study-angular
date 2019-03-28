@@ -26,6 +26,6 @@ export class AuthorDetailsComponent implements OnInit {
       queryParams: {
         order: 'newest'
       }
-    });
+    }).then();
   }
 }

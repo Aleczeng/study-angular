@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {AbstractControl} from '@angular/forms';
 
 @Component({
   selector: 'form-errors',
@@ -7,5 +7,5 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['form-errors.component.css']
 })
 export class FormErrorsComponent {
-  @Input() validationName: FormControl;
+  @Input() validationName: AbstractControl;
 }

@@ -13,7 +13,7 @@ export class TextUpperPipe implements PipeTransform {
         words[i] = words[i].toLowerCase();
         if (words[i].indexOf('the') < 0 && words[i].indexOf('of') < 0) {
           words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);
-        }else if( i === 0){
+        } else if (i === 0) {
           words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);
         }
       }
