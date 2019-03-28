@@ -14,7 +14,7 @@ export class SignupFormComponent {
       Validators.minLength(3),
       Validators.maxLength(5),
       ValidatorsPattern.cannotContainSpace
-    ]),
+    ], ValidatorsPattern.shouldBeUnique),
     password: new FormControl('', Validators.required)
   });
 
@@ -22,7 +22,7 @@ export class SignupFormComponent {
     return this.form.get('username');
   }
 
-  logType(x) {
-    console.log(x);
+  login() {
+    this.form.setErrors({formInvalid: true});
   }
 }
