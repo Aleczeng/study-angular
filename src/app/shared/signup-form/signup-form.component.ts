@@ -9,13 +9,15 @@ import {ValidatorsPattern} from '../../common/validators/validators.pattern';
 export class SignupFormComponent {
 
   form = new FormGroup({
-    username: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(5),
-      ValidatorsPattern.cannotContainSpace
-    ], ValidatorsPattern.shouldBeUnique),
-    password: new FormControl('', Validators.required)
+    account: new FormGroup({
+      username: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(5),
+        ValidatorsPattern.cannotContainSpace
+      ], ValidatorsPattern.shouldBeUnique),
+      password: new FormControl('', Validators.required)
+    })
   });
 
   get username() {
@@ -24,5 +26,9 @@ export class SignupFormComponent {
 
   login() {
     this.form.setErrors({formInvalid: true});
+  }
+
+  logType(x) {
+    console.log(x);
   }
 }
