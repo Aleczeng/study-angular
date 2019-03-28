@@ -12,6 +12,17 @@
       <input type="text" class="form-control" id="password" name="password" formControlName="password">
       <form-errors [validationName]="form.get('account.password')"></form-errors>
     </div>
+
+    <div class="form-group">
+      <label for="topic">Topic</label>
+      <input class="form-control" id="topic" type="text" #topic (keyup.enter)="addTopic(topic)">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let topic of topics.controls">{{topic.value}}
+          <i class="fas fa-times float-right" (click)="onDelete(topic)"></i>
+        </li>
+      </ul>
+    </div>
+
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary m-2">Submit</button>
 </form>
