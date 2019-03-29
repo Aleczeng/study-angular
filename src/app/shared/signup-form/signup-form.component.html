@@ -4,13 +4,28 @@
     <div class="form-group">
       <label for="username">User Name</label>
       <input type="text" class="form-control" id="username" formControlName="username">
-      <form-errors [validationName]="form.get('account.username')"></form-errors>
+      <form-errors [validationName]="username"></form-errors>
     </div>
 
     <div class="form-group">
-      <label for="password">Password</label>
-      <input type="text" class="form-control" id="password" name="password" formControlName="password">
-      <form-errors [validationName]="form.get('account.password')"></form-errors>
+      <label for="oldPassword">Old Password</label>
+      <input type="password" class="form-control" id="oldPassword" formControlName="oldPassword">
+      <form-errors [validationName]="form.get('account.oldPassword')"></form-errors>
+    </div>
+
+    <div class="form-group">
+      <label for="newPassword">New Password</label>
+      <input type="password" class="form-control" id="newPassword" formControlName="newPassword">
+      <form-errors [validationName]="form.get('account.newPassword')"></form-errors>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword">
+      <div class="alert alert-danger my-alert"
+           *ngIf="account.hasError('confirmPasswordError')&&form.get('account.confirmPassword').touched">
+        Confirm Password is not much
+      </div>
     </div>
 
     <div class="form-group">
@@ -24,5 +39,22 @@
     </div>
 
   </div>
+  <button type="submit" class="btn btn-primary m-2">Submit</button>
+</form>
+
+<form [formGroup]="addressForm">
+  <h3>Form Builder</h3>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input class="form-control" id="city" type="text" formControlName="city">
+    <form-errors [validationName]="city"></form-errors>
+  </div>
+  <div class="form-group">
+    <label for="country">Country</label>
+    <input class="form-control" id="country" type="text" formControlName="country">
+    <form-errors [validationName]="country"></form-errors>
+  </div>
+
+
   <button type="submit" class="btn btn-primary m-2">Submit</button>
 </form>

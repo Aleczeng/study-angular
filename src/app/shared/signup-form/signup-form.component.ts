@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AbstractControl, FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ValidatorsPattern} from '../../common/validators/validators.pattern';
 
 @Component({
@@ -8,27 +8,55 @@ import {ValidatorsPattern} from '../../common/validators/validators.pattern';
   styleUrls: ['signup-form.component.css']
 })
 export class SignupFormComponent {
+  addressForm;
+  form;
 
-  form = new FormGroup({
-    account: new FormGroup({
-      username: new FormControl('', [
-        Validators.required,
-        Validators.minLength(3),
-        Validators.maxLength(5),
-        ValidatorsPattern.cannotContainSpace
-      ], ValidatorsPattern.shouldBeUnique),
-      password: new FormControl('', Validators.required)
-    }),
+  constructor(fb: FormBuilder) {
+    this.addressForm = fb.group({
+      city: ['', Validators.required],
+      country: ['', Validators.required],
+      newPassword: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
+    });
 
-    topics: new FormArray([])
-  });
+
+    this.form = new FormGroup({
+      account: new FormGroup({
+        username: new FormControl('', [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(5),
+          ValidatorsPattern.cannotContainSpace
+        ], ValidatorsPattern.shouldBeUnique),
+        oldPassword: new FormControl('', Validators.required, ValidatorsPattern.checkOldPassword),
+        newPassword: new FormControl('', Validators.required),
+        confirmPassword: new FormControl('', Validators.required),
+      }, {validators: ValidatorsPattern.checkConfirmPassword}),
+      topics: new FormArray([])
+    });
+  }
+
+
+  get account() {
+    return this.form.get('account');
+  }
 
   get username() {
-    return this.form.get('username');
+    return this.form.get('account.username');
   }
 
   get topics() {
+
+    // only FormArray has controls
     return <FormArray>this.form.get('topics');
+  }
+
+  get city() {
+    return <FormControl>this.addressForm.get('city');
+  }
+
+  get country() {
+    return <FormControl>this.addressForm.get('country');
   }
 
   login() {
