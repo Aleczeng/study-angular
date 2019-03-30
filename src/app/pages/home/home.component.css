@@ -1,0 +1,10 @@
+.my-page{
+  background-image: url(~src/assets/images/ballon.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 800px;
+}
+
+h1{
+  color: white;
+}
