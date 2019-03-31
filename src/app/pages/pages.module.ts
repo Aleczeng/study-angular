@@ -15,6 +15,8 @@ import {ReuseComponentComponent} from './reuse-component/reuse-component.compone
 import {DirectivesStudyComponent} from './directives-study/directives-study.component';
 import {DirectivesModule} from '../directives/directives.module';
 import {FormsStudyComponent} from './forms-study/forms-study.component';
+import {HttpStudyComponent} from './http-study/http-study.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {FormsStudyComponent} from './forms-study/forms-study.component';
     ReuseComponentComponent,
     DirectivesStudyComponent,
     NotFoundComponent,
-    FormsStudyComponent
+    FormsStudyComponent,
+    HttpStudyComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import {FormsStudyComponent} from './forms-study/forms-study.component';
     CommonModule,
     SharedModule,
     DirectivesModule,
-    PipesModule
+    PipesModule,
+    HttpClientModule
   ],
   exports: [
     HomeComponent,
@@ -44,7 +48,8 @@ import {FormsStudyComponent} from './forms-study/forms-study.component';
     ReuseComponentComponent,
     DirectivesStudyComponent,
     NotFoundComponent,
-    FormsStudyComponent
+    FormsStudyComponent,
+    HttpStudyComponent
   ]
 })
 export class PagesModule {

@@ -14,6 +14,7 @@ import {PipesComponent} from './pages/pipes-example/pipes.component';
 import {ReuseComponentComponent} from './pages/reuse-component/reuse-component.component';
 import {DirectivesStudyComponent} from './pages/directives-study/directives-study.component';
 import {FormsStudyComponent} from './pages/forms-study/forms-study.component';
+import {HttpStudyComponent} from './pages/http-study/http-study.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'reuse-component', component: ReuseComponentComponent},
   {path: 'directives-study', component: DirectivesStudyComponent},
   {path: 'forms-study', component: FormsStudyComponent},
+  {path: 'http-study', component: HttpStudyComponent},
   {path: '**', component: NotFoundComponent},
 ];
 

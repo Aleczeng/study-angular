@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="m-2 p-2 text-center">
+    <h2>Http Study</h2>
+  </div>
+  <label for="newPost">New Post</label>
+  <input class="form-control" type="text" id="newPost" placeholder="New Post"
+         (keyup.enter)="createNewPost(title)" #title>
+  <ul class="list-group" *ngFor="let post of posts">
+    <li class="list-group-item">
+      <button class="btn btn-primary" (click)="changePost(post)">Update</button>&nbsp;
+      <button class="btn btn-danger" (click)="deletePost(post)">Update</button>
+      {{post.title}}
+    </li>
+  </ul>
+</div>
