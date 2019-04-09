@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {PostService} from '../../service/post.service';
 
 @Component({
   selector: 'app-http-study',
@@ -7,35 +7,38 @@ import {HttpClient} from '@angular/common/http';
 })
 export class HttpStudyComponent implements OnInit {
   posts: any;
-  private url = 'https://jsonplaceholder.typicode.com/posts';
 
-  constructor(private http: HttpClient) {
+  constructor(private postService: PostService) {
   }
 
   ngOnInit(): void {
-    this.http.get(this.url).subscribe(resp => {
+    // get
+    this.postService.getPosts().subscribe(resp => {
       this.posts = resp;
-      console.log(this.posts);
     });
   }
 
+  // post
   createNewPost(input: HTMLInputElement) {
     const post: any = {title: input.value};
     input.value = '';
-    this.http.post(this.url, post).subscribe(resp => {
+    this.postService.createPosts(post).subscribe(resp => {
       console.log(resp);
       this.posts.splice(0, 0, resp);
     });
   }
 
+  // update
   changePost(post) {
-    this.http.patch(this.url + '/' + post.id, JSON.stringify({isRed: true})).subscribe(response => {
-      console.log(response);
+    this.postService.updatePosts(post.id).subscribe(resp => {
+      console.log(resp);
     });
   }
 
+
+  // delete
   deletePost(post) {
-    this.http.delete(this.url + '/' + post.id).subscribe(response => {
+    this.postService.deletePosts(post.id).subscribe(resp => {
       const index = this.posts.indexOf(post);
       this.posts.splice(index, 1);
     });
