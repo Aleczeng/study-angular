@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {ErrorHandler, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
@@ -15,6 +15,7 @@ import {ReuseComponentComponent} from './pages/reuse-component/reuse-component.c
 import {DirectivesStudyComponent} from './pages/directives-study/directives-study.component';
 import {FormsStudyComponent} from './pages/forms-study/forms-study.component';
 import {HttpStudyComponent} from './pages/http-study/http-study.component';
+import {MyErrorHandler} from './common/my-error-handler';
 
 
 const routes: Routes = [
@@ -40,7 +41,7 @@ const routes: Routes = [
     PagesModule,
     ServicesModule,
   ],
-  providers: [],
+  providers: [{provide: ErrorHandler, useClass: MyErrorHandler}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
