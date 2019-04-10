@@ -13,7 +13,7 @@ export class HttpStudyComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.postService.getPosts().subscribe((resp: Post[]) => {
+    this.postService.getAll().subscribe((resp: Post[]) => {
       this.posts = resp;
     });
   }
@@ -21,20 +21,20 @@ export class HttpStudyComponent implements OnInit {
   createNewPost(input: HTMLInputElement) {
     const post: any = {title: input.value};
     input.value = '';
-    this.postService.createPosts(post).subscribe((resp: Post) => {
+    this.postService.create(post).subscribe((resp: Post) => {
       console.log(resp);
       this.posts.splice(0, 0, resp);
     });
   }
 
   changePost(post) {
-    this.postService.updatePosts(post.id).subscribe(resp => {
+    this.postService.update(post.id).subscribe(resp => {
       console.log(resp);
     });
   }
 
   deletePost(post) {
-    this.postService.deletePosts(post.id).subscribe(() => {
+    this.postService.delete(post.id).subscribe(() => {
       const index = this.posts.indexOf(post);
       this.posts.splice(index, 1);
     });
