@@ -17,6 +17,7 @@ import {DirectivesModule} from '../directives/directives.module';
 import {FormsStudyComponent} from './forms-study/forms-study.component';
 import {HttpStudyComponent} from './http-study/http-study.component';
 import {HttpClientModule} from '@angular/common/http';
+import {HttpExerciseComponent} from './http-exercise/http-exercise.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
     DirectivesStudyComponent,
     NotFoundComponent,
     FormsStudyComponent,
-    HttpStudyComponent
+    HttpStudyComponent,
+    HttpExerciseComponent
   ],
   imports: [
     BrowserModule,
@@ -42,14 +44,9 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule
   ],
   exports: [
-    HomeComponent,
     NavBarComponent,
     PipesComponent,
     ReuseComponentComponent,
-    DirectivesStudyComponent,
-    NotFoundComponent,
-    FormsStudyComponent,
-    HttpStudyComponent
   ]
 })
 export class PagesModule {

@@ -1,0 +1,11 @@
+.follower-photo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.follower-profile {
+  font-weight: bold;
+  margin-left: 20px;
+}
+

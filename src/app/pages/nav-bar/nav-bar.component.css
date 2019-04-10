@@ -1,0 +1,13 @@
+.dropdown-item{
+  background-color: #343a40;
+  color: #6c757d;
+}
+
+.dropdown-item.active{
+  color: white;
+}
+
+.dropdown-menu{
+  background-color: #343a40;
+  margin: 0.4rem 0 0;
+}

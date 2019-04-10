@@ -16,6 +16,7 @@ import {DirectivesStudyComponent} from './pages/directives-study/directives-stud
 import {FormsStudyComponent} from './pages/forms-study/forms-study.component';
 import {HttpStudyComponent} from './pages/http-study/http-study.component';
 import {MyErrorHandler} from './common/my-error-handler';
+import {HttpExerciseComponent} from './pages/http-exercise/http-exercise.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'directives-study', component: DirectivesStudyComponent},
   {path: 'forms-study', component: FormsStudyComponent},
   {path: 'http-study', component: HttpStudyComponent},
+  {path: 'http-exercise', component: HttpExerciseComponent},
   {path: '**', component: NotFoundComponent},
 ];
 
