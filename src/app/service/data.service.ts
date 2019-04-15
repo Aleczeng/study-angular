@@ -1,10 +1,7 @@
-import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Post} from '../interface/post';
 import {catchError} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 
-@Injectable()
 export class DataService {
   constructor(private url: string, private http: HttpClient) {
   }

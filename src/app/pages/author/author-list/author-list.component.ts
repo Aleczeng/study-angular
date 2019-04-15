@@ -9,8 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./author-list.component.css']
 })
 export class AuthorListComponent implements OnInit {
-  protected authors: Author[];
-
+  authors: Author[];
   page: number;
   pageSize: number;
 
