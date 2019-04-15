@@ -6,8 +6,8 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./like.component.css']
 })
 export class LikeComponent {
-  @Input('isActive') isActive: boolean;
-  @Input('likesCount') likesCount: number;
+  @Input() isActive: boolean;
+  @Input() likesCount: number;
 
   constructor() {
   }

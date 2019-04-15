@@ -6,7 +6,7 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./zippy.component.css']
 })
 export class ZippyComponent {
-  @Input('title') title: string;
+  @Input() title: string;
   isExpand: boolean;
 
   constructor() {
