@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="m-2 p-2 text-center">
+    <h2>Firebase Study</h2>
+  </div>
+  <label for="newPost">New Post</label>
+  <input class="form-control" type="text" id="newPost" placeholder="New Post" (keyup.enter)="addCourse(course)" #course>
+  <ul class="list-group" *ngFor="let course of courses$ | async">
+    <li class="list-group-item">
+      {{course}}
+    </li>
+  </ul>
+
+  <div class="m-2" *ngIf="student$ | async as student">
+    <p>Student name: {{student.name}}</p>
+    <p>Student gender: {{student.gender}}</p>
+  </div>
+</div>

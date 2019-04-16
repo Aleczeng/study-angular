@@ -18,6 +18,7 @@ import {FormsStudyComponent} from './forms-study/forms-study.component';
 import {HttpStudyComponent} from './http-study/http-study.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpExerciseComponent} from './http-exercise/http-exercise.component';
+import {FirebaseStudyComponent} from './firebase-study/firebase-study.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {HttpExerciseComponent} from './http-exercise/http-exercise.component';
     NotFoundComponent,
     FormsStudyComponent,
     HttpStudyComponent,
-    HttpExerciseComponent
+    HttpExerciseComponent,
+    FirebaseStudyComponent
   ],
   imports: [
     BrowserModule,

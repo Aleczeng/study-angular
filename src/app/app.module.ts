@@ -17,6 +17,10 @@ import {FormsStudyComponent} from './pages/forms-study/forms-study.component';
 import {HttpStudyComponent} from './pages/http-study/http-study.component';
 import {MyErrorHandler} from './common/my-error-handler';
 import {HttpExerciseComponent} from './pages/http-exercise/http-exercise.component';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {FirebaseStudyComponent} from './pages/firebase-study/firebase-study.component';
 
 
 const routes: Routes = [
@@ -30,6 +34,7 @@ const routes: Routes = [
   {path: 'forms-study', component: FormsStudyComponent},
   {path: 'http-study', component: HttpStudyComponent},
   {path: 'http-exercise', component: HttpExerciseComponent},
+  {path: 'firebase-study', component: FirebaseStudyComponent},
   {path: '**', component: NotFoundComponent},
 ];
 
@@ -42,6 +47,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     PagesModule,
     ServicesModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [{provide: ErrorHandler, useClass: MyErrorHandler}],
   bootstrap: [AppComponent]
