@@ -20,7 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpExerciseComponent} from './http-exercise/http-exercise.component';
 import {FirebaseStudyComponent} from './firebase-study/firebase-study.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatRadioModule, MatSelectModule} from '@angular/material';
+import {MatComponentsModule} from '../shared/mat-components.module';
 
 @NgModule({
   declarations: [
@@ -47,11 +47,7 @@ import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatRadioModule, Mat
     PipesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatDialogModule
+    MatComponentsModule
   ],
   exports: [
     NavBarComponent,

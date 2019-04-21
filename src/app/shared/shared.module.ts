@@ -10,7 +10,7 @@ import {ContactFormComponent} from './contact-form/contact-form.component';
 import {SignupFormComponent} from './signup-form/signup-form.component';
 import {FormErrorsComponent} from './form-errors/form-errors.component';
 import {DialogComponent} from './dialog/dialog.component';
-import {MatButtonModule, MatDialogModule} from '@angular/material';
+import {MatComponentsModule} from './mat-components.module';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,7 @@ import {MatButtonModule, MatDialogModule} from '@angular/material';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    MatDialogModule,
-    MatButtonModule
+    MatComponentsModule
   ],
   exports: [
     FavStarComponent,
