@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Hi {{name}}</h1>
+<div mat-dialog-content>
+  <p>Do you like Angular material?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="result" color="accent">Yes</button>
+  <button mat-button (click)="onNoClick()" color="warn">No</button>
+</div>
+
+

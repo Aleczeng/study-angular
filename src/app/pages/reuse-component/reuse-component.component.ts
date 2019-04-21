@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import 'hammerjs';
+import {MatDialog} from '@angular/material';
+import {DialogComponent} from '../../shared/dialog/dialog.component';
 
 @Component({
   selector: 'app-reuse-component',
@@ -12,7 +14,7 @@ export class ReuseComponentComponent {
   foods: { value: number, viewValue: string }[];
   food: number;
 
-  constructor() {
+  constructor(private matDialog: MatDialog) {
     this.onClick = false;
     this.tweet = {
       isLiked: false,
@@ -28,5 +30,10 @@ export class ReuseComponentComponent {
 
   onFavChange($event) {
     this.emitValue = $event;
+  }
+
+  openDialog() {
+    this.matDialog.open(DialogComponent, {width: '300px', data: {name: 'Alec'}})
+      .afterClosed().subscribe(resp => console.log(resp));
   }
 }
