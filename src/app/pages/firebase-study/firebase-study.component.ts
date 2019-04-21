@@ -1,12 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
+import {AngularFireDatabase} from '@angular/fire/database';
 
 @Component({
   selector: 'app-firebase-study',
   templateUrl: './firebase-study.component.html',
 })
 export class FirebaseStudyComponent implements OnInit {
-  angularFireList: AngularFireList<any>;
   courses$: any;
   student$;
 
@@ -14,15 +13,14 @@ export class FirebaseStudyComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.angularFireList = this.firebaseDB.list('/course');
-    this.courses$ = this.angularFireList.valueChanges();
+    this.courses$ = this.firebaseDB.list('/course').valueChanges();
     this.student$ = this.firebaseDB.object('/students/1').valueChanges();
     console.log('courses$', this.courses$);
     console.log(this.student$);
   }
 
   addCourse(course: HTMLInputElement) {
-    this.angularFireList.push(course.value);
+    this.firebaseDB.list('/course').push(course.value).then(resp => console.log(resp));
     course.value = '';
   }
 }

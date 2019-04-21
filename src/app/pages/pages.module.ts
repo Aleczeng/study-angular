@@ -19,6 +19,8 @@ import {HttpStudyComponent} from './http-study/http-study.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpExerciseComponent} from './http-exercise/http-exercise.component';
 import {FirebaseStudyComponent} from './firebase-study/firebase-study.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,10 @@ import {FirebaseStudyComponent} from './firebase-study/firebase-study.component'
     SharedModule,
     DirectivesModule,
     PipesModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule
   ],
   exports: [
     NavBarComponent,
