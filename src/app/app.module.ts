@@ -8,7 +8,6 @@ import {AuthorListComponent} from './pages/author/author-list/author-list.compon
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {AuthorDetailsComponent} from './pages/author/author-details/author-details.component';
 import {DataBindingComponent} from './pages/data-binding/data-binding.component';
-import {ServicesModule} from './service/services.module';
 import {PagesModule} from './pages/pages.module';
 import {PipesComponent} from './pages/pipes-example/pipes.component';
 import {ReuseComponentComponent} from './pages/reuse-component/reuse-component.component';
@@ -46,7 +45,6 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     PagesModule,
-    ServicesModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
