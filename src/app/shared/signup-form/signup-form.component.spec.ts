@@ -1,11 +1,11 @@
-import {ReuseComponentComponent} from './reuse-component.component';
-import {MatDialog} from '@angular/material';
+import {SignupFormComponent} from './signup-form.component';
+import {FormBuilder} from '@angular/forms';
 
 describe('ReuseComponent', () => {
-  const matDialog = new MatDialog(null);
-  const component = new ReuseComponentComponent(matDialog);
+  let component: SignupFormComponent;
 
   beforeEach(() => {
+    component = new SignupFormComponent(new FormBuilder());
   });
 
   afterEach(() => {
@@ -15,7 +15,13 @@ describe('ReuseComponent', () => {
 
   });
 
-  it('should return food', () => {
-    expect(component.foods[0].viewValue).toContain('Steak');
+  it('should have username', () => {
+    expect(component.form.get('account').contains('username')).toBeTruthy();
+  });
+
+  it('should make username control required', () => {
+    const control = component.form.get('account.username');
+    control.setValue('');
+    expect(control.valid).toBeFalsy();
   });
 });

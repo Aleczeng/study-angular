@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pages',
-  templateUrl: './pages.component.html',
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
 })
-export class PagesComponent {
+export class NavComponent {
 }

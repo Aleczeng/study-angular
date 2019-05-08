@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
 
 @Injectable({providedIn: 'root'})
-export class AuthorService {
-  static getAuthors() {
-    return [
-      {id: 1, name: 'author1'},
-      {id: 2, name: 'author2'},
-      {id: 3, name: 'author3'}
-    ];
+export class AuthService {
+  isAuthenticated;
+
+  login(username: string, password: string) {
+    this.isAuthenticated = username === 'alec' && password === '123';
+    console.log(this.isAuthenticated);
   }
 }

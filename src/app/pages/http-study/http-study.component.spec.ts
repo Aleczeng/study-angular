@@ -1,42 +1,29 @@
-import {Component, OnInit} from '@angular/core';
+import {HttpStudyComponent} from './http-study.component';
 import {PostService} from '../../service/post.service';
-import {Post} from '../../interface/post';
+import {from} from 'rxjs';
 
-@Component({
-  selector: 'app-http-study',
-  templateUrl: './http-study.component.html',
-})
-export class HttpStudyComponent implements OnInit {
-  posts: Post[];
+describe('HttpStudyComponent', () => {
+  let component: HttpStudyComponent;
+  let postService: PostService;
 
-  constructor(private postService: PostService) {
-  }
+  beforeEach(() => {
+    postService = new PostService(null);
+    component = new HttpStudyComponent(postService);
+  });
 
-  ngOnInit(): void {
-    this.postService.getAll().subscribe((resp: Post[]) => {
-      this.posts = resp;
+  it('should get all from server', () => {
+    spyOn(postService, 'getAll').and.callFake(() => {
+
+      // If you are using rxjs >=6.0.0 then you no longer use Observable.from. Instead from is a standalone function.
+      return from([[
+        {id: 1, title: 'a'},
+        {id: 2, title: 'b'},
+        {id: 3, title: 'c'},
+      ]]);
+
+      component.ngOnInit();
+
+      expect(component.posts.length).toBeGreaterThan(0);
     });
-  }
-
-  createNewPost(input: HTMLInputElement) {
-    const post: any = {title: input.value};
-    input.value = '';
-    this.postService.create(post).subscribe((resp: Post) => {
-      console.log(resp);
-      this.posts.splice(0, 0, resp);
-    });
-  }
-
-  changePost(post) {
-    this.postService.update(post.id).subscribe(resp => {
-      console.log(resp);
-    });
-  }
-
-  deletePost(post) {
-    this.postService.delete(post.id).subscribe(() => {
-      const index = this.posts.indexOf(post);
-      this.posts.splice(index, 1);
-    });
-  }
-}
+  });
+});

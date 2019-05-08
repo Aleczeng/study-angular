@@ -8,7 +8,7 @@ import {PipesComponent} from './pipes-example/pipes.component';
 import {CommonModule} from '@angular/common';
 import {DataBindingComponent} from './data-binding/data-binding.component';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from '../shared/shared.module';
 import {PipesModule} from '../pipes/pipes.module';
 import {ReuseComponentComponent} from './reuse-component/reuse-component.component';
@@ -21,6 +21,7 @@ import {HttpExerciseComponent} from './http-exercise/http-exercise.component';
 import {FirebaseStudyComponent} from './firebase-study/firebase-study.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatComponentsModule} from '../shared/mat-components.module';
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatComponentsModule} from '../shared/mat-components.module';
     FormsStudyComponent,
     HttpStudyComponent,
     HttpExerciseComponent,
-    FirebaseStudyComponent
+    FirebaseStudyComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import {MatComponentsModule} from '../shared/mat-components.module';
     PipesModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatComponentsModule
+    MatComponentsModule,
+    ReactiveFormsModule
   ],
   exports: [
     NavBarComponent,
