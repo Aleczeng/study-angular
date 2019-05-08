@@ -2,33 +2,33 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item" routerLinkActive="active current" [routerLinkActiveOptions]="{ exact: true }">
-        <a class="nav-link" routerLink="">Home</a>
+        <a class="nav-link" routerLink="/">Home</a>
       </li>
       <li class="nav-item" routerLinkActive="active current">
-        <a class="nav-link" routerLink="/author" [queryParams]="{order: 'newest'}">Author</a>
+        <a class="nav-link" routerLink="/nav/author" [queryParams]="{order: 'newest'}">Author</a>
       </li>
       <li class="nav-item" routerLinkActive="active current">
-        <a class="nav-link" routerLink="/data-binding">Data Binding</a>
+        <a class="nav-link" routerLink="/nav/data-binding">Data Binding</a>
       </li>
       <li class="nav-item" routerLinkActive="active current">
-        <a class="nav-link" routerLink="/pipes">Pipes</a>
+        <a class="nav-link" routerLink="/nav/pipes">Pipes</a>
       </li>
       <li class="nav-item" routerLinkActive="active current">
-        <a class="nav-link" routerLink="/reuse-component">Component</a>
+        <a class="nav-link" routerLink="/nav/reuse-component">Component</a>
       </li>
       <li class="nav-item" routerLinkActive="active current">
-        <a class="nav-link" routerLink="/directives-study">Directives</a>
+        <a class="nav-link" routerLink="/nav/directives-study">Directives</a>
       </li>
       <li class="nav-item" routerLinkActive="active current">
-        <a class="nav-link" routerLink="/forms-study">Forms</a>
+        <a class="nav-link" routerLink="/nav/forms-study">Forms</a>
       </li>
       <li class="nav-item dropdown" routerLinkActive="active current">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
            aria-expanded="false">Http</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="/http-study" routerLinkActive="active">Http Lesson</a>
-          <a class="dropdown-item" routerLink="/http-exercise" routerLinkActive="active">Http Exercise</a>
-          <a class="dropdown-item" routerLink="/firebase-study" routerLinkActive="active">Firebase Study</a>
+          <a class="dropdown-item" routerLink="/nav/http-study" routerLinkActive="active">Http Lesson</a>
+          <a class="dropdown-item" routerLink="/nav/http-exercise" routerLinkActive="active">Http Exercise</a>
+          <a class="dropdown-item" routerLink="/nav/firebase-study" routerLinkActive="active">Firebase Study</a>
         </div>
       </li>
     </ul>
