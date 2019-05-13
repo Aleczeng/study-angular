@@ -37,7 +37,18 @@
   <button type="submit" class="btn btn-primary btn-sm">Submit</button>
 
   <div class="m-2">
-    <quill-editor></quill-editor>
+    <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <h3>Editor</h3>
+        <quill-editor formControlName="editor"></quill-editor>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+    </form>
+
+  </div>
+
+  <div class="m-2">
+    <h3>Output</h3>
   </div>
 
 </form>
