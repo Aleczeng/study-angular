@@ -11,6 +11,7 @@ import {SignupFormComponent} from './signup-form/signup-form.component';
 import {FormErrorsComponent} from './form-errors/form-errors.component';
 import {DialogComponent} from './dialog/dialog.component';
 import {MatComponentsModule} from './mat-components.module';
+import {QuillModule} from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatComponentsModule} from './mat-components.module';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    MatComponentsModule
+    MatComponentsModule,
+    QuillModule
   ],
   exports: [
     FavStarComponent,
