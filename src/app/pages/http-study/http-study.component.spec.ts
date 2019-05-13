@@ -1,6 +1,6 @@
 import {HttpStudyComponent} from './http-study.component';
 import {PostService} from '../../service/post.service';
-import {from} from 'rxjs';
+import {empty, from, Observable} from 'rxjs';
 
 describe('HttpStudyComponent', () => {
   let component: HttpStudyComponent;
@@ -26,4 +26,11 @@ describe('HttpStudyComponent', () => {
       expect(component.posts.length).toBeGreaterThan(0);
     });
   });
+
+  it('should delete a post from server', () => {
+    const spy = spyOn(postService, 'delete').and.returnValue(empty());
+    component.deletePost(1);
+    expect(spy).toHaveBeenCalled();
+  });
+
 });
