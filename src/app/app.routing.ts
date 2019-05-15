@@ -5,6 +5,6 @@ import {LoginComponent} from './pages/login/login.component';
 
 export const APP_ROUTES: Routes = [
   {path: '', redirectTo: 'nav', pathMatch: 'full'},
-  {path: 'login', component: LoginComponent},
+  {path: 'products', component: LoginComponent},
   {path: '**', component: NotFoundComponent},
 ];
