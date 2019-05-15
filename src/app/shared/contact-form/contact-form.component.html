@@ -44,13 +44,12 @@
       </div>
       <button type="submit" class="btn btn-primary btn-sm">Submit</button>
     </form>
-
   </div>
 
   <div class="m-2">
     <h3>Output</h3>
+    <div [innerHTML]="this.editorForm.get('editor').value"></div>
   </div>
-
 </form>
 
 
